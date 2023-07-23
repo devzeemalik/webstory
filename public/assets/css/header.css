@@ -1,0 +1,57 @@
+.header {
+  --header-height: 60px;
+  
+  position: relative;
+  width: 100%;
+  height: var(--header-height);
+  left: 0px;
+  top: 0px;
+  background: #000000;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger-menu {
+  width: 24px;
+  height: 21px;
+  margin-left: 32px;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="1.5" x2="24" y2="1.5" stroke="white" stroke-width="3"/><line y1="10.5" x2="16.8" y2="10.5" stroke="white" stroke-width="3"/><line y1="19.5" x2="24" y2="19.5" stroke="white" stroke-width="3"/></svg>');
+}
+
+.user-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 32px;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 7C13.1 7 14 7.9 14 9C14 10.1 13.1 11 12 11C10.9 11 10 10.1 10 9C10 7.9 10.9 7 12 7ZM12 5C9.79 5 8 6.79 8 9C8 11.21 9.79 13 12 13C14.21 13 16 11.21 16 9C16 6.79 14.21 5 12 5ZM12 0C5.37 0 0 5.37 0 12C0 18.63 5.37 24 12 24C18.63 24 24 18.63 24 12C24 5.37 18.63 0 12 0ZM5.74 19.79C6.83 18.56 9.06 17.5 12 17.5C14.94 17.5 17.17 18.56 18.26 19.79C16.54 21.17 14.37 22 12 22C9.63 22 7.46 21.17 5.74 19.79ZM19.68 18.39C18.1 16.66 15.25 15.5 11.99 15.5C8.73 15.5 5.88 16.66 4.31 18.39C2.87 16.66 2 14.43 2 12C2 6.49 6.49 2 12 2C17.51 2 22 6.49 22 12C22 14.43 21.13 16.65 19.68 18.39Z" fill="white"/></svg>');
+}
+
+
+.title {
+  font-family: Georgia;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--header-height);
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.title span:nth-child(2) {
+  font-weight: 700;
+  line-height: 36px;
+}
+
+/* Mobile CSS rules here*/
+@media only screen and (hover: none) and (pointer: coarse) {
+  .hamburger-menu {
+    margin-left: 14px;
+  }
+  
+  .user-icon {
+    margin-right: 14px;
+  }
+}

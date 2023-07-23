@@ -1,0 +1,88 @@
+.carousel-section {
+ /* margin-top: 44px;*/
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-container::after {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  content: '';
+  width: 239px;
+  height: 488px;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 89.96%);
+  background-attachment: local, local, scroll, scroll;
+}
+
+.carousel-container.overflow-right::after {
+  display: block;
+}
+
+.carousel-container::before {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  content: '';
+  width: 239px;
+  height: 488px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 89.96%);
+}
+
+.carousel-container.overflow-left::before {
+  display: block;
+}
+
+
+.carousel-header {
+  border: 1px solid #cccccc;
+  border-top: 10px solid #000000;
+  border-bottom: none;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 60px;
+  padding-left: 36px;
+}
+
+.carousel-cards-container {
+  /*border-top: 1px solid #cccccc;*/
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 488px;
+  overflow-x: scroll;
+}
+
+
+/* Mobile CSS rules here*/
+@media only screen and (hover: none) and (pointer: coarse) {
+  .carousel-header {
+    padding-left: 24px;
+  }
+
+  .carousel-container {
+    margin: 0px 13px;
+  }
+
+  .carousel-cards-container {
+  /*  border: 1px solid #cccccc;*/
+    height: 348px;
+  }
+  .carousel-container::after {
+    width: 180px;
+    height: 349px;
+  }
+  .carousel-container::before {
+    width: 180px;
+    height: 349px;
+  }
+}
